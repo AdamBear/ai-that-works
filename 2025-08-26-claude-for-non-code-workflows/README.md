@@ -6,28 +6,21 @@
 
 [![Claude for non-code tasks](https://img.youtube.com/vi/NJcph4j9sNg/0.jpg)](https://www.youtube.com/watch?v=NJcph4j9sNg)
 
-Links:
+#### Links:
 
-
-## Episode Highlights
-
-> "Instead of building a full-blown personal CRM, what if you just used a simple Markdown file? We showed how you can maintain a `crm.md` file, dump your notes and interactions into it, and then use Claude as an intelligent assistant to query and update it."
-
-> "You can ask questions like 'Who did I talk to about vector databases last week?' or 'Summarize my last conversation with Jane from Acme Corp.' This is a powerful workflow that requires zero database setup."
-
-> "Markdown as a Database: For many tasks, a structured text file is a perfectly good—and much simpler—database."
-
-> "Context Engineering over Code: The magic isn't in writing a new application, but in engineering the context (the prompt and the .md file) to make the LLM a useful tool in your existing workflow."
+- Hamel - show me the prompt https://hamel.dev/blog/posts/prompt/
+- Cancelation PR - https://github.com/BoundaryML/baml/pull/2357
+- Previous Episode on Context Eng for coding agents - [../2025-08-05-advanced-context-engineering-for-coding-agents](../2025-08-05-advanced-context-engineering-for-coding-agents)
 
 ## Key Takeaways
 
-- You can build powerful "no-code" tools by combining LLMs with simple formats like Markdown. The key is to think in terms of effective workflows and context engineering, not just agentic automation.
+- You can build powerful "no-code" tools by combining LLMs with simple formats like Markdown. The key is to think in terms of effective workflows and context engineering.
 
-- Instead of complex software systems, simple Markdown files can serve as effective databases for many personal and professional use cases when paired with LLMs.
+- Skip the MCP servers - Claude can one-shot most API integrations
 
-- Context engineering (how you structure prompts and data) is often more important than building new applications. Focus on creating workflows that leverage existing tools intelligently.
+- Build tools that create deterministic context compacting with `head` or by slicing file collections using frontmatter.
 
-- The demonstrated personal CRM example shows how a simple `.md` file plus Claude can replace complex database-backed applications for many use cases.
+- BurritoNow CRM example shows how a simple `.md` file plus Claude can replace complex database-backed applications for many use cases.
 
 ## Resources
 
@@ -36,3 +29,22 @@ Links:
 - Sign up for the next session on [Luma](https://lu.ma/baml)
 
 ## Whiteboards
+
+<img width="5163" height="2256" alt="image" src="https://github.com/user-attachments/assets/6b798fb1-6a1c-4f34-a2d3-ab512002d225" />
+
+<img width="2773" height="2454" alt="image" src="https://github.com/user-attachments/assets/a6fc94dc-5582-459e-8025-1b78e8217129" />
+
+<img width="3202" height="1672" alt="image" src="https://github.com/user-attachments/assets/074e29ff-5c38-4748-bb13-f7e05dc5a8ef" />
+
+<img width="2247" height="1790" alt="image" src="https://github.com/user-attachments/assets/bc2d96bd-dc5f-454d-aa2e-0b559a34d2f5" />
+
+<img width="3386" height="2206" alt="image" src="https://github.com/user-attachments/assets/d71541a3-de31-4aa9-9641-ddb4367cac06" />
+
+<img width="3563" height="1967" alt="image" src="https://github.com/user-attachments/assets/c40f4796-0801-41fa-9919-07753daa0ca0" />
+
+<img width="2190" height="2186" alt="image" src="https://github.com/user-attachments/assets/3183c402-656e-42c5-9d00-18f933d8f552" />
+
+
+
+
+
