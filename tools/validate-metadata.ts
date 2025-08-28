@@ -311,12 +311,11 @@ function writeReadmeFile(episodes: ValidationResult[], rootPath: string): void {
 
 # 🦄 **AI That Works**
 
-*A weekly deep-dive into production-ready AI engineering*
+*On Zoom, Tuesdays at 10 AM PST - an hour of live coding, Q&A, and production-ready AI engineering*
 
 [![Event Calendar](https://img.shields.io/badge/Events-lu.ma%2Fbaml-2ea44f?style=for-the-badge&logo=calendar)](https://lu.ma/baml)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865f2?style=for-the-badge&logo=discord&logoColor=white)](https://boundaryml.com/discord)
 [![YouTube Playlist](https://img.shields.io/badge/YouTube-Watch%20All%20Episodes-ff0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/playlist?list=PLi60mUelRAbFqfgymVfZttlkIyt0XHZjt)
-[![Live Sessions](https://img.shields.io/badge/Live%20Code-Every%20Tuesday%2010AM%20PST-ff6b6b?style=for-the-badge&logo=youtube&logoColor=white)](#episodes--workshops)
 
 </div>${ctaSection}
 
