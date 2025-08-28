@@ -516,7 +516,7 @@ Usage: bun run validate-metadata.ts [options]
 Options:
   --check            Validate metadata only (default)
   --fix              Auto-fix missing metadata fields
-  --generate-readme  Generate root README.md with automated episode table
+  --generate-readme  Generate root README.md with automated episode table + RSS feed
   --repo-root        Repository root URL (default: https://github.com/ai-that-works/ai-that-works)
   --help, -h         Show this help message
 
@@ -562,9 +562,10 @@ function main() {
     results.push(result);
   }
   
-  // Generate README.md if requested
+  // Generate README.md and RSS feed if requested
   if (options.generateReadme) {
     writeReadmeFile(results, rootPath);
+    generateRSSFeed(results, rootPath);
   }
 
   // Print results
@@ -649,4 +650,84 @@ if (import.meta.main) {
   main();
 }
 
-export { MetadataSchema, validateEpisodeFolder, generateGuid, writeReadmeFile, type EpisodeMetadata };
+function generateRSSFeed(episodes: ValidationResult[], rootPath: string): void {
+  // Filter to completed episodes with YouTube links
+  const completedEpisodes = episodes
+    .filter(ep => ep.valid && ep.metadata)
+    .filter(ep => {
+      const eventDate = new Date(ep.metadata!.eventDate);
+      const now = new Date();
+      return eventDate < now && ep.metadata!.links?.youtube;
+    })
+    .sort((a, b) => {
+      // Sort by date descending (newest first) for RSS
+      const dateA = new Date(a.metadata!.eventDate);
+      const dateB = new Date(b.metadata!.eventDate);
+      return dateB.getTime() - dateA.getTime();
+    });
+
+  const rssItems = completedEpisodes.map(ep => {
+    const metadata = ep.metadata!;
+    const pubDate = new Date(metadata.eventDate).toUTCString();
+    const cleanTitle = metadata.title.replace(/🦄\s*ai that works:\s*/i, '');
+    const folderName = ep.folder.split('/').pop()!;
+    const isWorkshop = metadata.title.toLowerCase().includes('workshop') || metadata.event_type === 'workshop';
+    const episodeNum = isWorkshop ? 
+      (metadata.title.includes('NYC') ? 'NYC Workshop' : 
+       metadata.title.includes('SF') ? 'SF Workshop' : 'Workshop') : 
+      metadata.episode.toString();
+    
+    const guid = metadata.guid || `aitw-${folderName}`;
+    const youtubeUrl = metadata.links!.youtube!;
+    const codeUrl = metadata.links?.code || `https://github.com/ai-that-works/ai-that-works/tree/main/${folderName}`;
+    
+    return `    <item>
+      <title><![CDATA[${cleanTitle}]]></title>
+      <description><![CDATA[${metadata.description}
+
+🎥 Watch: ${youtubeUrl}
+💻 Code: ${codeUrl}
+🗓️ Event: ${metadata.event_link}
+
+AI That Works - Weekly conversations about production-ready AI engineering with live coding and Q&A.]]></description>
+      <link>${youtubeUrl}</link>
+      <guid isPermaLink="false">${guid}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <category>Technology</category>
+      <category>Software Engineering</category>
+      <category>Artificial Intelligence</category>
+      <enclosure url="${youtubeUrl}" type="video/youtube" />
+    </item>`;
+  }).join('\n');
+
+  const rssContent = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>🦄 AI That Works</title>
+    <description>Weekly conversations about production-ready AI engineering. Live coding, Q&A, and deep dives into real-world AI systems. Every Tuesday at 10 AM PST on Zoom.</description>
+    <link>https://github.com/ai-that-works/ai-that-works</link>
+    <language>en-us</language>
+    <managingEditor>hello@boundaryml.com (AI That Works)</managingEditor>
+    <webMaster>hello@boundaryml.com (AI That Works)</webMaster>
+    <category>Technology</category>
+    <category>Software Engineering</category>
+    <category>Artificial Intelligence</category>
+    <image>
+      <url>https://github.com/ai-that-works/ai-that-works/raw/main/assets/logo.png</url>
+      <title>🦄 AI That Works</title>
+      <link>https://github.com/ai-that-works/ai-that-works</link>
+    </image>
+    <atom:link href="https://github.com/ai-that-works/ai-that-works/raw/main/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <ttl>1440</ttl>
+${rssItems}
+  </channel>
+</rss>`;
+
+  // Write RSS feed
+  const rssPath = join(rootPath, 'feed.xml');
+  writeFileSync(rssPath, rssContent, 'utf-8');
+  console.log(`📡 Generated RSS feed: ${rssPath} (${completedEpisodes.length} episodes)`);
+}
+
+export { MetadataSchema, validateEpisodeFolder, generateGuid, writeReadmeFile, generateRSSFeed, type EpisodeMetadata };
