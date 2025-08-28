@@ -650,6 +650,16 @@ if (import.meta.main) {
   main();
 }
 
+function escapeXml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;")
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, ""); // Remove control characters
+}
+
 function generateRSSFeed(episodes: ValidationResult[], rootPath: string): void {
   // Filter to completed episodes with YouTube links
   const completedEpisodes = episodes
@@ -681,30 +691,32 @@ function generateRSSFeed(episodes: ValidationResult[], rootPath: string): void {
     const youtubeUrl = metadata.links!.youtube!;
     const codeUrl = metadata.links?.code || `https://github.com/ai-that-works/ai-that-works/tree/main/${folderName}`;
     
+    const description = `${metadata.description}
+
+Watch: ${youtubeUrl}
+Code: ${codeUrl}
+Event: ${metadata.event_link}
+
+AI That Works - Weekly conversations about production-ready AI engineering with live coding and Q&A.`;
+
     return `    <item>
       <title><![CDATA[${cleanTitle}]]></title>
-      <description><![CDATA[${metadata.description}
-
-🎥 Watch: ${youtubeUrl}
-💻 Code: ${codeUrl}
-🗓️ Event: ${metadata.event_link}
-
-AI That Works - Weekly conversations about production-ready AI engineering with live coding and Q&A.]]></description>
-      <link>${youtubeUrl}</link>
-      <guid isPermaLink="false">${guid}</guid>
+      <description><![CDATA[${description}]]></description>
+      <link>${escapeXml(youtubeUrl)}</link>
+      <guid isPermaLink="false">${escapeXml(guid)}</guid>
       <pubDate>${pubDate}</pubDate>
       <category>Technology</category>
       <category>Software Engineering</category>
       <category>Artificial Intelligence</category>
-      <enclosure url="${youtubeUrl}" type="video/youtube" />
+      <enclosure url="${escapeXml(youtubeUrl)}" type="video/youtube" />
     </item>`;
   }).join('\n');
 
   const rssContent = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>🦄 AI That Works</title>
-    <description>Weekly conversations about production-ready AI engineering. Live coding, Q&A, and deep dives into real-world AI systems. Every Tuesday at 10 AM PST on Zoom.</description>
+    <title><![CDATA[🦄 AI That Works]]></title>
+    <description><![CDATA[Weekly conversations about production-ready AI engineering. Live coding, Q&A, and deep dives into real-world AI systems. Every Tuesday at 10 AM PST on Zoom.]]></description>
     <link>https://github.com/ai-that-works/ai-that-works</link>
     <language>en-us</language>
     <managingEditor>hello@boundaryml.com (AI That Works)</managingEditor>
@@ -714,7 +726,7 @@ AI That Works - Weekly conversations about production-ready AI engineering with 
     <category>Artificial Intelligence</category>
     <image>
       <url>https://github.com/ai-that-works/ai-that-works/raw/main/assets/logo.png</url>
-      <title>🦄 AI That Works</title>
+      <title><![CDATA[🦄 AI That Works]]></title>
       <link>https://github.com/ai-that-works/ai-that-works</link>
     </image>
     <atom:link href="https://github.com/ai-that-works/ai-that-works/raw/main/feed.xml" rel="self" type="application/rss+xml" />
