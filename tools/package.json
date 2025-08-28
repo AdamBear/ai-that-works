@@ -3,6 +3,18 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "validate": "bun run validate-metadata.ts --check",
+    "validate:watch": "bun --watch validate-metadata.ts --check",
+    "lint": "bun run validate-metadata.ts --check",
+    "lint:fix": "bun run validate-metadata.ts --fix",
+    "generate-readme": "bun run validate-metadata.ts --generate-readme",
+    "readme": "bun run validate-metadata.ts --fix --generate-readme"
+  },
+  "dependencies": {
+    "zod": "^3.23.8",
+    "yaml": "^2.4.5"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
