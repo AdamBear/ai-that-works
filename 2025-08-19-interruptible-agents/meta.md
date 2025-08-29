@@ -12,7 +12,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/2ivXNdHJpxk
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-08-19-interruptible-agents
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-08-19-interruptible-agents
 season: 2
 episode: 15
 event_type: episode

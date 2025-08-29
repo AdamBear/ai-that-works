@@ -11,7 +11,7 @@ media:
   type: video/youtube
 links:
   youtube: https://www.youtube.com/watch?v=-doV02eh8XI
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-07-08-context-engineering
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-07-08-context-engineering
 season: 2
 episode: 9
 event_type: episode

@@ -11,7 +11,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/yxJDyQ8v6P0
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-04-22-twelve-factor-agents
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-04-22-twelve-factor-agents
 season: 1
 episode: 4
 event_type: episode

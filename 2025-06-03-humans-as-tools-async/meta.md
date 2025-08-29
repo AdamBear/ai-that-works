@@ -14,7 +14,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/NMhH5_ju3-I
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-06-03-humans-as-tools-async
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-06-03-humans-as-tools-async
 season: 2
 episode: 4
 event_type: episode

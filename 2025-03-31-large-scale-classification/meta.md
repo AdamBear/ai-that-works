@@ -11,7 +11,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/6B7MzraQMZk
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-03-31-large-scale-classification
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-03-31-large-scale-classification
 season: 1
 episode: 1
 event_type: episode

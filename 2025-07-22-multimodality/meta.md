@@ -12,7 +12,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/sCScFZB4Am8
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-07-22-multimodality
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-07-22-multimodality
 season: 2
 episode: 11
 event_type: episode

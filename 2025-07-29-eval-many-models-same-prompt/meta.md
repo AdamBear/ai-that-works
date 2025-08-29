@@ -14,7 +14,7 @@ media:
   type: video/youtube
 links:
   youtube: https://www.youtube.com/watch?v=OawyQOrlubM
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-07-29-eval-many-models-same-prompt
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-07-29-eval-many-models-same-prompt
 season: 2
 episode: 12
 event_type: episode

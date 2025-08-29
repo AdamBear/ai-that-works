@@ -11,7 +11,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/D-pcKduKdYM
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-04-07-reasoning-models-vs-prompts
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-04-07-reasoning-models-vs-prompts
 season: 1
 episode: 2
 event_type: episode

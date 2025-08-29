@@ -12,7 +12,7 @@ media:
 links:
   youtube: https://youtu.be/-N6MajRfqYw
   rsvp: https://lu.ma/j5y6bd3i
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-05-13-designing-evals
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-05-13-designing-evals
 season: 2
 episode: 1
 event_type: episode

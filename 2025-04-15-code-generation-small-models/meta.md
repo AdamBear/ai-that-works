@@ -11,7 +11,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/KJkvYdGEnAY
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-04-15-code-generation-small-models
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-04-15-code-generation-small-models
 season: 1
 episode: 3
 event_type: episode

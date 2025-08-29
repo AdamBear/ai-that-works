@@ -9,7 +9,7 @@ media:
   type: video/youtube
 links:
   youtube: https://www.youtube.com/watch?v=42AzKZRNhsk
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-08-05-advanced-context-engineering-for-coding-agents
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-08-05-advanced-context-engineering-for-coding-agents
 season: 2
 episode: 13
 event_type: episode

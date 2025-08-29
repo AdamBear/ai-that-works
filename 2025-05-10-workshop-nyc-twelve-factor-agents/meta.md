@@ -12,7 +12,7 @@ media:
 links:
   discord: https://discord.gg/CZAptKnB
   connect: https://nyc.aitinkerers.org/connect/mu__kniDIi7PZM
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-05-10-workshop-nyc-twelve-factor-agents
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-05-10-workshop-nyc-twelve-factor-agents
 season: 1
 episode: NYC Workshop
 event_type: workshop

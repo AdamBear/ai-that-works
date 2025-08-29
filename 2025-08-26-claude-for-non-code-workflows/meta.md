@@ -15,7 +15,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/NJcph4j9sNg
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-08-26-claude-for-non-code-workflows
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-08-26-claude-for-non-code-workflows
 season: 2
 episode: 16
 event_type: episode

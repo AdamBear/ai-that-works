@@ -14,7 +14,7 @@ media:
 links:
   youtube: https://www.youtube.com/watch?v=gkekVC67iVs
   rsvp: https://lu.ma/iw1d9l3j
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-05-20-policies-to-prompts
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-05-20-policies-to-prompts
 season: 2
 episode: 2
 event_type: episode

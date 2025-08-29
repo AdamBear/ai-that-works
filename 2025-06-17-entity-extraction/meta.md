@@ -13,7 +13,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/niR896pQWOQ
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-06-17-entity-extraction
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-06-17-entity-extraction
 season: 2
 episode: 6
 event_type: episode

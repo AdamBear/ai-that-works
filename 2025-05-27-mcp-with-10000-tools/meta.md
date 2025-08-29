@@ -11,7 +11,7 @@ media:
   type: video/youtube
 links:
   youtube: https://www.youtube.com/watch?v=P5wRLKF4bt8
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-05-27-mcp-with-10000-tools
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-05-27-mcp-with-10000-tools
 season: 2
 episode: 3
 event_type: episode

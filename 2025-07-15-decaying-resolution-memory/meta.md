@@ -14,7 +14,7 @@ media:
   type: video/youtube
 links:
   youtube: https://www.youtube.com/watch?v=CEGSDlCtI8U
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-07-15-decaying-resolution-memory
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-07-15-decaying-resolution-memory
 season: 2
 episode: 10
 event_type: episode

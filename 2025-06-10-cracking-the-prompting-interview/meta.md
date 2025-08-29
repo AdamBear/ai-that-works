@@ -13,7 +13,7 @@ media:
   type: video/youtube
 links:
   youtube: https://youtu.be/PU2h0V-pANQ
-  code: https://github.com/BoundaryML/ai-that-works/tree/main/2025-06-10-cracking-the-prompting-interview
+  code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-06-10-cracking-the-prompting-interview
 season: 2
 episode: 5
 event_type: episode

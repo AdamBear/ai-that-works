@@ -466,7 +466,6 @@ Before joining, get familiar with our toolkit:
     if (metadata.links?.code) {
       const codeUrl = metadata.links.code
         .replace('https://github.com/ai-that-works/ai-that-works/tree/main/', './')
-        .replace('https://github.com/BoundaryML/ai-that-works/tree/main/', './');
       links.push(`[code](${codeUrl})`);
     }
     if (!isPast) {
