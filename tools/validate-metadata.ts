@@ -537,7 +537,7 @@ Usage: bun run validate-metadata.ts [options]
 Options:
   --check            Validate metadata only (default)
   --fix              Auto-fix missing metadata fields
-  --generate-readme  Generate root README.md with automated episode table + RSS feed
+  --generate-readme  Generate root README.md with automated episode table + RSS feed + data.json
   --repo-root        Repository root URL (default: https://github.com/ai-that-works/ai-that-works)
   --help, -h         Show this help message
 
@@ -583,10 +583,11 @@ function main() {
     results.push(result);
   }
   
-  // Generate README.md and RSS feed if requested
+  // Generate README.md, RSS feed, and data.json if requested
   if (options.generateReadme) {
     writeReadmeFile(results, rootPath);
     generateRSSFeed(results, rootPath);
+    generateDataJson(results, rootPath);
   }
 
   // Print results
@@ -763,4 +764,50 @@ ${rssItems}
   console.log(`📡 Generated RSS feed: ${rssPath} (${completedEpisodes.length} episodes)`);
 }
 
-export { MetadataSchema, validateEpisodeFolder, generateGuid, writeReadmeFile, generateRSSFeed, type EpisodeMetadata };
+function generateDataJson(episodes: ValidationResult[], rootPath: string): void {
+  // Filter to valid episodes and extract metadata
+  const episodeData = episodes
+    .filter(ep => ep.valid && ep.metadata)
+    .map(ep => {
+      const metadata = ep.metadata!;
+      const folderName = ep.folder.split('/').pop()!;
+      
+      return {
+        folder: folderName,
+        ...metadata,
+        // Ensure consistent data types
+        season: Number(metadata.season),
+        episode: Number(metadata.episode),
+        eventDate: metadata.eventDate,
+        // Add computed fields
+        isPast: new Date(metadata.eventDate) < new Date(),
+        isWorkshop: metadata.title.toLowerCase().includes('workshop') || metadata.event_type === 'workshop'
+      };
+    })
+    .sort((a, b) => {
+      // Sort by eventDate descending (newest first)
+      const dateA = new Date(a.eventDate);
+      const dateB = new Date(b.eventDate);
+      return dateB.getTime() - dateA.getTime();
+    });
+
+  const dataJson = {
+    episodes: episodeData,
+    meta: {
+      totalEpisodes: episodeData.length,
+      completedEpisodes: episodeData.filter(ep => ep.isPast && ep.links?.youtube).length,
+      upcomingEpisodes: episodeData.filter(ep => !ep.isPast).length,
+      workshops: episodeData.filter(ep => ep.isWorkshop).length,
+      seasons: Array.from(new Set(episodeData.map(ep => ep.season))).sort(),
+      lastUpdated: new Date().toISOString(),
+      generatedBy: 'validate-metadata.ts'
+    }
+  };
+
+  // Write data.json
+  const dataPath = join(rootPath, 'data.json');
+  writeFileSync(dataPath, JSON.stringify(dataJson, null, 2), 'utf-8');
+  console.log(`📄 Generated data.json: ${dataPath} (${episodeData.length} episodes)`);
+}
+
+export { MetadataSchema, validateEpisodeFolder, generateGuid, writeReadmeFile, generateRSSFeed, generateDataJson, type EpisodeMetadata };
