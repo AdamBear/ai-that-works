@@ -9,7 +9,8 @@
     "lint": "bun run validate-metadata.ts --check",
     "lint:fix": "bun run validate-metadata.ts --fix",
     "generate-readme": "bun run validate-metadata.ts --generate-readme",
-    "readme": "bun run validate-metadata.ts --fix --generate-readme"
+    "readme": "bun run validate-metadata.ts --fix --generate-readme",
+    "build": "bun run validate-metadata.ts --fix --generate-readme"
   },
   "dependencies": {
     "zod": "^3.23.8",
