@@ -3,7 +3,7 @@
     {
       "folder": "2025-09-02-voice-agents-supervisor-threading",
       "guid": "aitw-021",
-      "title": "🦄 ai that works: Voice Agents and Supervisor Threading",
+      "title": "Voice Agents and Supervisor Threading",
       "description": "Exploring voice-based AI agents and supervisor threading patterns for managing complex conversational workflows.",
       "event_link": "https://lu.ma/aitw-voice-agents",
       "eventDate": "2025-09-02T18:00:00Z",
@@ -23,7 +23,7 @@
     {
       "folder": "2025-08-26-claude-for-non-code-workflows",
       "guid": "aitw-020",
-      "title": "S02E16 – Claude for Non-Code Tasks",
+      "title": "Claude for Non-Code Tasks",
       "description": "On #17 we talked about advanced context engineering workflows for using Claude code to work in complex codebases. This week, we're gonna get a little weird with it, and show off a bunch of ways you can use Claude Code as a generic agent to handle non-coding tasks. We'll learn things like: Skipping the MCP and having claude write its own scripts to interact with external systems, Creating internal knowledge graphs with markdown files, How to blend agentic retrieval and search with deterministic context packing",
       "event_link": "https://lu.ma/aitw-voice-agents",
       "eventDate": "2025-08-26T18:00:00Z",
@@ -492,7 +492,7 @@
       1,
       2
     ],
-    "lastUpdated": "2025-08-29T08:22:05.126Z",
+    "lastUpdated": "2025-08-29T08:35:31.489Z",
     "generatedBy": "validate-metadata.ts"
   }
 }

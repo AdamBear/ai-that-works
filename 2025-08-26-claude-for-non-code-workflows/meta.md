@@ -1,6 +1,6 @@
 ---
 guid: aitw-020
-title: S02E16 – Claude for Non-Code Tasks
+title: Claude for Non-Code Tasks
 description: "On #17 we talked about advanced context engineering workflows for
   using Claude code to work in complex codebases. This week, we're gonna get a
   little weird with it, and show off a bunch of ways you can use Claude Code as

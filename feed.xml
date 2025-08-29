@@ -16,10 +16,10 @@
       <link>https://github.com/ai-that-works/ai-that-works</link>
     </image>
     <atom:link href="https://github.com/ai-that-works/ai-that-works/raw/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 29 Aug 2025 08:22:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 Aug 2025 08:35:31 GMT</lastBuildDate>
     <ttl>1440</ttl>
     <item>
-      <title><![CDATA[S02E16 – Claude for Non-Code Tasks]]></title>
+      <title><![CDATA[Claude for Non-Code Tasks]]></title>
       <description><![CDATA[On #17 we talked about advanced context engineering workflows for using Claude code to work in complex codebases. This week, we're gonna get a little weird with it, and show off a bunch of ways you can use Claude Code as a generic agent to handle non-coding tasks. We'll learn things like: Skipping the MCP and having claude write its own scripts to interact with external systems, Creating internal knowledge graphs with markdown files, How to blend agentic retrieval and search with deterministic context packing
 
 Watch: https://youtu.be/NJcph4j9sNg
