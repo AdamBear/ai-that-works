@@ -1,19 +1,3 @@
----
-"guid": "aitw-017"
-"title": "S02E13 – Context Engineering for Coding Agents"
-"description": "A deep dive into managing research, specs, and planning to get the most out of coding agents and coding CLIs"
-"event_link": "https://lu.ma/aitw-hypereng"
-"eventDate": "2025-08-05T18:00:00Z"
-"media":
-  "url": "https://www.youtube.com/watch?v=42AzKZRNhsk"
-  "type": "video/youtube"
-"links":
-  "youtube": "https://www.youtube.com/watch?v=42AzKZRNhsk"
-  "code": "https://github.com/BoundaryML/ai-that-works/tree/main/2025-08-05-advanced-context-engineering-for-coding-agents"
-"season": 2
-"episode": 13
-"event_type": "episode"
----
 
 # 🦄 ai that works: Advanced Context Engineering for Coding Agents
 

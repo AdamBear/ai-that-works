@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 
 import { z } from 'zod';
-import { readFileSync, readdirSync, statSync, writeFileSync } from 'fs';
+import { readFileSync, readdirSync, statSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import * as yaml from 'yaml';
 
@@ -139,10 +139,24 @@ function createFrontmatter(metadata: any): string {
 
 function validateEpisodeFolder(folderPath: string, options?: LintOptions, allFolders?: string[]): ValidationResult {
   const folderName = folderPath.split('/').pop()!;
+  const metaPath = join(folderPath, 'meta.md');
   const readmePath = join(folderPath, 'README.md');
   
   try {
-    const content = readFileSync(readmePath, 'utf-8');
+    // Read metadata from meta.md if it exists, otherwise fall back to README.md
+    let content: string;
+    let isMetaFile = false;
+    
+    if (existsSync(metaPath)) {
+      content = readFileSync(metaPath, 'utf-8');
+      isMetaFile = true;
+    } else if (existsSync(readmePath)) {
+      content = readFileSync(readmePath, 'utf-8');
+      isMetaFile = false;
+    } else {
+      throw new Error('Neither meta.md nor README.md found');
+    }
+    
     const { metadata, hasMetadata, contentAfterFrontmatter } = extractFrontmatter(content);
     
     let currentMetadata = metadata || {};
@@ -162,11 +176,18 @@ function validateEpisodeFolder(folderPath: string, options?: LintOptions, allFol
         }
       }
       
-      // If in fix mode and we have changes, write the file
-      if (options?.mode === 'fix' && fixedFields.length > 0) {
+      // If in fix mode and we have changes or no metadata at all, write the file
+      if (options?.mode === 'fix' && (fixedFields.length > 0 || !hasMetadata)) {
         const newFrontmatter = createFrontmatter(currentMetadata);
-        const newContent = newFrontmatter + contentAfterFrontmatter;
-        writeFileSync(readmePath, newContent, 'utf-8');
+        
+        if (!hasMetadata || isMetaFile) {
+          // Create/update meta.md for new metadata or when meta.md exists
+          writeFileSync(metaPath, newFrontmatter, 'utf-8');
+        } else {
+          // Legacy: write to README.md with content (when README.md has frontmatter)
+          const newContent = newFrontmatter + contentAfterFrontmatter;
+          writeFileSync(readmePath, newContent, 'utf-8');
+        }
         wasFixed = true;
       }
     }
@@ -175,7 +196,7 @@ function validateEpisodeFolder(folderPath: string, options?: LintOptions, allFol
       return {
         folder: folderName,
         valid: false,
-        errors: ['No YAML frontmatter found in README.md']
+        errors: ['No YAML frontmatter found in meta.md or README.md']
       };
     }
 
