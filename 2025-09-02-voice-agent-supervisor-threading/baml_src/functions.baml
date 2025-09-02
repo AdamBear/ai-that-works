@@ -1,20 +1,20 @@
-class FinalizeAppointment {
-  intent "finalize_appointment"
-  start_date string
-  end_date string
-  human_name string
-  human_email string
-  human_phone string?
+// class FinalizeAppointment {
+//   intent "finalize_appointment"
+//   start_date string
+//   end_date string
+//   human_name string
+//   human_email string
+//   human_phone string?
 
-  dog_size "small" | "large"
-  dog_name string
-  vaccines string[]
-}
+//   dog_size "small" | "large"
+//   dog_name string
+//   vaccines string[]
+// }
 
-class MessageToUser {
-  intent "send_message_to_user"
-  message string
-}
+// class MessageToUser {
+//   intent "send_message_to_user"
+//   message string
+// }
 
 function SmallTalk(conversation: string) -> string {
   client SmallModel
@@ -50,7 +50,8 @@ function CheckCompliance(conversation: string) -> ComplianceReview {
   client SupervisorModel
   prompt #"
     {{ _.role("system") }}
-    You are an AI supervisor monitoring your employee Tony, who picks up the phones at Happy Paws dog daycare.
+    You are an AI supervisor monitoring your employee Tony, 
+    who picks up the phones at Happy Paws dog daycare.
     
      You must ensure Tony follows these rules strictly:
     
