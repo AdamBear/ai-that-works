@@ -1,3 +1,4 @@
+
 # Building a 12 Factor Agent 
 
 > In this episode, we dove deep on the theory behind 12 factor agents, before getting hands on and building one from scratch

@@ -1,3 +1,4 @@
+
 # 🦄 large scale classification
 
 > ​llms are great at classification from 5, 10, maybe even 50 categories. but how do we deal with situations when we have over 1000? perhaps its an ever changing list of categories?

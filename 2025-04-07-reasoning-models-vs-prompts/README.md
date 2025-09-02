@@ -1,3 +1,4 @@
+
 # 🦄 reasoning models vs reasoning prompts
 
 > models can reason but you can also reason within a prompt. which technique wins out when and why? we'll find out by adding reasoning to an existing movie chat agent.

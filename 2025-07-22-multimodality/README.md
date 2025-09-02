@@ -1,3 +1,4 @@
+
 # AI That Works #15: PDFs, Multimodality, Vision Models
 
 > Practical techniques for processing PDFs with multimodal AI - from image preprocessing to structured data extraction

@@ -1,3 +1,4 @@
+
 # 🦄 code generation with small models
 
 > large models can do a lot, but so can small models. we'll discuss techniques for how to leverage extremely small models for generating diffs and making changes in complete codebases.

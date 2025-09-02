@@ -1,3 +1,4 @@
+
 # 🦄 policy to prompt: evaluating the enron email dataset against SEC regulations
 
 one of the most common problems in AI engineering is looking at a set of policies / rules and evaluating evidence to determine if the rules were followed. In this session we'll explore turning policies into prompts and pipelines to evaluate which emails in the massive [enron email dataset](https://www.cs.cmu.edu/~enron/) violated SEC and Sarbanes-Oxley regulations.

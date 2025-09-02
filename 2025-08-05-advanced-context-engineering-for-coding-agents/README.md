@@ -1,6 +1,7 @@
+
 # 🦄 ai that works: Advanced Context Engineering for Coding Agents
 
-> A deep dive into managing research, specs, and planning to get the most out of coding agents and coding CLIs
+> By popular demand, AI That Works #17 will dive deep on a new kind of context engineering: managing research, specs, and planning to get the most of coding agents and coding CLIs. You've heard people bragging about spending thousands/mo on Claude Code, maxing out Amp limits, and much more. Now Dex and Vaibhav are gonna share some tips and tricks for pushing AI coding tools to their absolute limits, while still shipping well-tested, bug-free code. This isn't vibe-coding, this is something completely different.
 
 [Video](https://www.youtube.com/watch?v=42AzKZRNhsk) (1h27m)
 
