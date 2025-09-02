@@ -1,0 +1,165 @@
+# Voice Agent with Real-Time Supervisor
+
+A dual-model voice agent system that provides real-time conversation monitoring and correction. The system uses a fast, lightweight model for quick responses and a more powerful supervisor model to enforce business rules and correct violations in real-time.
+
+## Architecture
+
+```
+User Speech → STT → Small LLM → TTS → User
+                         ↓
+                    Supervisor LLM
+                         ↓
+                 [Correction if needed]
+```
+
+## Features
+
+- **Dual Model System**: Fast responses with intelligent oversight
+- **Real-Time Corrections**: Immediate intervention when rules are violated
+- **Concurrent Processing**: Supervisor runs in parallel without blocking responses
+- **Interruptible Speech**: Can stop mid-sentence to issue corrections
+- **Rule-Based Monitoring**: Enforces predefined business rules automatically
+
+## Setup
+
+### 1. Install UV (if not already installed)
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### 2. Configure Environment Variables
+
+Copy `.env.example` to `.env` and add your API keys:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your keys:
+- `OPENAI_API_KEY`: Your OpenAI API key
+- `ELEVENLABS_API_KEY`: Your ElevenLabs API key (optional for TTS)
+- `DEMO_MODE`: Set to `true` for text input, `false` for voice
+
+### 3. Run the Agent
+
+```bash
+chmod +x voice_agent.py
+./voice_agent.py
+```
+
+Or directly with UV:
+
+```bash
+uv run voice_agent.py
+```
+
+## Usage Examples
+
+### Example 1: Rule Violation - Other Pets
+
+```
+User: "Can you board my cat?"
+Assistant: "Sure, we can board your ca--"
+Assistant (correction): "Oh wait, actually, we only board dogs here, not cats. Can I help you with boarding for your dog?"
+```
+
+### Example 2: Rule Violation - Missing Email
+
+```
+User: "Book 3 days for my dog Rex next Monday"
+Assistant: "I'll book that for Rex--"
+Assistant (correction): "Oh wait, actually, I'll need your email address to complete the booking."
+```
+
+### Example 3: Normal Conversation
+
+```
+User: "What are your hours?"
+Assistant: "We're open from 7 AM to 7 PM Monday through Saturday, and closed on Sundays."
+[Supervisor: ON_TRACK - no intervention]
+```
+
+## Rules Enforced
+
+1. **Only discuss dogs** - No other pets (cats, birds, etc.)
+2. **Email required** - Must collect email before confirming bookings
+3. **Vaccine requirements** - Always answer "Rabies and Distemper"
+4. **No medical/legal advice** - Stay within service scope
+5. **Professional tone** - Always friendly and helpful
+6. **Pricing rules** - Need dates and dog size before quoting
+7. **Operating hours** - 7 AM-7 PM Mon-Sat, closed Sunday
+8. **Immediate redirection** - Correct violations instantly
+9. **Collect dog name** - Before finalizing bookings
+10. **Service focus** - Only dog daycare/boarding topics
+
+## Technical Details
+
+### Models Used
+
+- **Small Model**: `gpt-4o-mini` - Fast responses, conversational flow
+- **Supervisor Model**: `gpt-4o` - Rule enforcement, correction generation
+
+### Key Components
+
+1. **BAML Integration**: Structured outputs for reliable supervisor decisions
+2. **Async Architecture**: Non-blocking concurrent processing
+3. **Task Cancellation**: Clean interruption of in-progress operations
+4. **Context Management**: Shared conversation history between models
+
+## Testing the System
+
+### Test Scenarios
+
+1. **Cat Mention**: "I have a cat that needs boarding"
+2. **Missing Info**: "Book an appointment" (without email)
+3. **Wrong Vaccines**: Ask about vaccine requirements
+4. **Off Topic**: "What's the weather like?"
+5. **Multiple Violations**: Chain multiple rule-breaking queries
+
+### Expected Behaviors
+
+- Immediate corrections for violations
+- Natural conversation flow for valid queries
+- Consistent rule enforcement
+- Quick response times with minimal lag
+
+## Development
+
+### Project Structure
+
+```
+.
+├── voice_agent.py        # Main application
+├── baml_src/
+│   ├── clients.baml     # Model configurations
+│   └── functions.baml   # BAML function definitions
+├── .env                 # Environment variables
+└── README.md           # This file
+```
+
+### Extending the System
+
+To add new rules:
+1. Edit the supervisor prompt in `baml_src/functions.baml`
+2. Add the rule to the `CheckCompliance` function
+3. Test with relevant scenarios
+
+## Troubleshooting
+
+### Common Issues
+
+1. **BAML Import Error**: Run `baml init` in the project directory
+2. **No Audio**: Check ElevenLabs API key or set `DEMO_MODE=true`
+3. **Slow Responses**: Normal for supervisor model, designed for accuracy
+4. **Corrections Not Triggering**: Check rule definitions in BAML file
+
+## Demo Mode
+
+For testing without audio/API dependencies:
+
+```bash
+DEMO_MODE=true ./voice_agent.py
+```
+
+This uses text input/output instead of voice, useful for development and testing.

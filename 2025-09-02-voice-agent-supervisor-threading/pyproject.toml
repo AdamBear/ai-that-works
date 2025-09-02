@@ -1,0 +1,16 @@
+[project]
+name = "2025-09-02-voice-agent-supervisor-threading"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "baml-py>=0.206.1",
+    "colorama>=0.4.6",
+    "dotenv>=0.9.9",
+    "elevenlabs>=2.13.0",
+    "numpy>=2.2.6",
+    "openai>=1.102.0",
+    "rich>=14.1.0",
+    "sounddevice>=0.5.2",
+]
