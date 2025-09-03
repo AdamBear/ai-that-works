@@ -291,9 +291,8 @@ async def handle_supervisor_result(supervisor_task: asyncio.Task, convo_snapshot
                 if review.message:
                     print(f"{Style.DIM}Supervisor: {review.message}{Style.RESET_ALL}")
                     print(f"\n{Fore.YELLOW}Assistant: {review.message}{Style.RESET_ALL}")
-                    # Speak the late correction in voice mode
-                    if not DEMO_MODE:
-                        await speak_text_async(review.message)
+                    # Speak the late correction
+                    await speak_text_async(review.message)
             else:
                 print(f"\n{Fore.CYAN}Supervisor: ✅ ON_TRACK{Style.RESET_ALL}")
     except asyncio.CancelledError:
@@ -345,9 +344,8 @@ async def handle_turn(user_text: str) -> None:
                     correction = review.message or "Actually, let me correct that..."
                     print(f"\n{Fore.YELLOW}Assistant: {correction}{Style.RESET_ALL}")
                     
-                    # Speak the correction immediately in voice mode
-                    if not DEMO_MODE:
-                        await speak_text_async(correction)
+                    # Speak the correction immediately
+                    await speak_text_async(correction)
                     
                     # Update conversation with correction
                     assistant_reply = correction
@@ -389,8 +387,8 @@ async def handle_turn(user_text: str) -> None:
     # Add final response to conversation
     conversation.append({"role": "assistant", "text": assistant_reply})
     
-    # Speak the final response (in voice mode only, if not already interrupted and spoken)
-    if not DEMO_MODE and assistant_reply and not interrupted:
+    # Speak the final response (if not already interrupted and spoken)
+    if assistant_reply and not interrupted:
         await speak_text_async(assistant_reply)
 
 async def main_conversation():
