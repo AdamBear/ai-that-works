@@ -16,8 +16,25 @@
       <link>https://github.com/ai-that-works/ai-that-works</link>
     </image>
     <atom:link href="https://github.com/ai-that-works/ai-that-works/raw/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 29 Aug 2025 08:35:31 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Sep 2025 05:20:57 GMT</lastBuildDate>
     <ttl>1440</ttl>
+    <item>
+      <title><![CDATA[Voice Agents and Supervisor Threading]]></title>
+      <description><![CDATA[Exploring voice-based AI agents and supervisor threading patterns for managing complex conversational workflows.
+
+Watch: https://youtu.be/UCqD_KUyUJA
+Code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-09-02-voice-agents-supervisor-threading
+Event: https://lu.ma/aitw-voice-agents
+
+AI That Works - Weekly conversations about production-ready AI engineering with live coding and Q&A.]]></description>
+      <link>https://youtu.be/UCqD_KUyUJA</link>
+      <guid isPermaLink="false">aitw-021</guid>
+      <pubDate>Tue, 02 Sep 2025 18:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <category>Software Engineering</category>
+      <category>Artificial Intelligence</category>
+      <enclosure url="https://youtu.be/UCqD_KUyUJA" type="video/youtube" />
+    </item>
     <item>
       <title><![CDATA[Claude for Non-Code Tasks]]></title>
       <description><![CDATA[On #17 we talked about advanced context engineering workflows for using Claude code to work in complex codebases. This week, we're gonna get a little weird with it, and show off a bunch of ways you can use Claude Code as a generic agent to handle non-coding tasks. We'll learn things like: Skipping the MCP and having claude write its own scripts to interact with external systems, Creating internal knowledge graphs with markdown files, How to blend agentic retrieval and search with deterministic context packing

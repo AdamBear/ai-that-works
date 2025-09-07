@@ -12,11 +12,11 @@
 
 <div align="center">
 <h2>🦄 <strong>Next Episode</strong></h2>
-<h3><strong>Voice Agents and Supervisor Threading</strong></h3>
-<p><strong>Tuesday, September 2, 2025 at 10 AM PST</strong></p>
-<p><em>Exploring voice-based AI agents and supervisor threading patterns for managing complex conversational workflows.</em></p>
+<h3><strong>Generative UIs and Structured Streaming</strong></h3>
+<p><strong>Tuesday, September 9, 2025 at 10 AM PST</strong></p>
+<p><em>We'll explore hard problems in building rich UIs that rely on streaming data from LLMs. ​Specifically, we'll talk through techniques for rendering **STRUCTURED** outputs from LLMs, with real-world examples of how to handle partially-streamed outputs over incomplete JSON data. We'll explore advanced needs like * Fields that should be required for stream to start * ​Rendering React Components with partial data ​* Handling nullable fields vs. yet-to-be-streamed fields * ​Building high-quality User feedback * ​Handling errors mid-stream</em></p>
 
-<a href="https://lu.ma/aitw-voice-agents" target="_blank">
+<a href="https://luma.com/2g1xfjts" target="_blank">
 <img src="https://img.shields.io/badge/🦄_REGISTER_NOW-Join_Live_Session-ff4444?style=for-the-badge&logo=calendar" alt="Register Now">
 </a>
 
@@ -100,10 +100,22 @@ Before joining, get familiar with our toolkit:
         <div style="margin-bottom: 2px;">
           <span style="background: #dc3545; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: bold;">UPCOMING</span>
         </div>
+        <div style="color: #666; font-size: 13px; margin-bottom: 4px;">2025-09-09</div>
+        <div style="font-size: 16px; line-height: 1.3; margin-bottom: 6px;"><strong>#22</strong>: Generative UIs and Structured Streaming</div>
+        <div style="font-size: 13px; color: #666;">
+          <a href="./2025-09-09-generative-uis">code</a> • <a href="https://luma.com/2g1xfjts">register</a>
+        </div>
+      </div>
+    </td><td><div style="padding: 8px 0; line-height: 1.5;">We'll explore hard problems in building rich UIs that rely on streaming data from LLMs. ​Specifically, we'll talk through techniques for rendering **STRUCTURED** outputs from LLMs, with real-world examples of how to handle partially-streamed outputs over incomplete JSON data. We'll explore advanced needs like * Fields that should be required for stream to start * ​Rendering React Components with partial data ​* Handling nullable fields vs. yet-to-be-streamed fields * ​Building high-quality User feedback * ​Handling errors mid-stream</div></td></tr>
+<tr><td>
+      <div style="padding: 8px 0;">
+        <div style="margin-bottom: 2px;">
+          <span style="background: #28a745; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: bold;">PAST</span>
+        </div>
         <div style="color: #666; font-size: 13px; margin-bottom: 4px;">2025-09-02</div>
         <div style="font-size: 16px; line-height: 1.3; margin-bottom: 6px;"><strong>#21</strong>: Voice Agents and Supervisor Threading</div>
         <div style="font-size: 13px; color: #666;">
-          <a href="./2025-09-02-voice-agents-supervisor-threading">code</a> • <a href="https://lu.ma/aitw-voice-agents">register</a>
+          <a href="https://youtu.be/UCqD_KUyUJA">watch</a> • <a href="./2025-09-02-voice-agents-supervisor-threading">code</a>
         </div>
       </div>
     </td><td><div style="padding: 8px 0; line-height: 1.5;">Exploring voice-based AI agents and supervisor threading patterns for managing complex conversational workflows.</div></td></tr>
