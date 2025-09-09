@@ -1,7 +1,27 @@
 {
   "episodes": [
     {
-      "folder": "2025-09-02-voice-agents-supervisor-threading",
+      "folder": "2025-09-09-generative-uis",
+      "guid": "aitw-022",
+      "title": "Generative UIs and Structured Streaming",
+      "description": "We'll explore hard problems in building rich UIs that rely on streaming data from LLMs. ​Specifically, we'll talk through techniques for rendering **STRUCTURED** outputs from LLMs, with real-world examples of how to handle partially-streamed outputs over incomplete JSON data. We'll explore advanced needs like * Fields that should be required for stream to start * ​Rendering React Components with partial data ​* Handling nullable fields vs. yet-to-be-streamed fields * ​Building high-quality User feedback * ​Handling errors mid-stream",
+      "event_link": "https://luma.com/2g1xfjts",
+      "eventDate": "2025-09-09T18:00:00Z",
+      "event_type": "episode",
+      "media": {
+        "url": null,
+        "type": "video/youtube"
+      },
+      "links": {
+        "code": "https://github.com/ai-that-works/ai-that-works/tree/main/2025-09-09-generative-uis"
+      },
+      "season": 2,
+      "episode": 22,
+      "isPast": false,
+      "isWorkshop": false
+    },
+    {
+      "folder": "2025-09-02-voice-agent-supervisor-threading",
       "guid": "aitw-021",
       "title": "Voice Agents and Supervisor Threading",
       "description": "Exploring voice-based AI agents and supervisor threading patterns for managing complex conversational workflows.",
@@ -9,15 +29,16 @@
       "eventDate": "2025-09-02T18:00:00Z",
       "event_type": "episode",
       "media": {
-        "url": null,
+        "url": "https://youtu.be/UCqD_KUyUJA",
         "type": "video/youtube"
       },
       "links": {
+        "youtube": "https://youtu.be/UCqD_KUyUJA",
         "code": "https://github.com/ai-that-works/ai-that-works/tree/main/2025-09-02-voice-agents-supervisor-threading"
       },
       "season": 2,
       "episode": 21,
-      "isPast": false,
+      "isPast": true,
       "isWorkshop": false
     },
     {
@@ -484,15 +505,15 @@
     }
   ],
   "meta": {
-    "totalEpisodes": 23,
-    "completedEpisodes": 20,
+    "totalEpisodes": 24,
+    "completedEpisodes": 21,
     "upcomingEpisodes": 1,
     "workshops": 2,
     "seasons": [
       1,
       2
     ],
-    "lastUpdated": "2025-08-29T08:35:31.489Z",
+    "lastUpdated": "2025-09-07T05:20:57.842Z",
     "generatedBy": "validate-metadata.ts"
   }
 }
