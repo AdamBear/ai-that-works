@@ -12,11 +12,18 @@
 
 <div align="center">
 <h2>🦄 <strong>Next Episode</strong></h2>
-<h3><strong>Generative UIs and Structured Streaming</strong></h3>
-<p><strong>Tuesday, September 9, 2025 at 10 AM PST</strong></p>
-<p><em>We'll explore hard problems in building rich UIs that rely on streaming data from LLMs. ​Specifically, we'll talk through techniques for rendering **STRUCTURED** outputs from LLMs, with real-world examples of how to handle partially-streamed outputs over incomplete JSON data. We'll explore advanced needs like * Fields that should be required for stream to start * ​Rendering React Components with partial data ​* Handling nullable fields vs. yet-to-be-streamed fields * ​Building high-quality User feedback * ​Handling errors mid-stream</em></p>
+<h3><strong>Bash vs. MCP - token efficient coding agent tooling</strong></h3>
+<p><strong>Tuesday, September 16, 2025 at 10 AM PST</strong></p>
+<p><em>On this week's AI That Works, we'll explore the great Bash vs. MCP debate - what's better for helping coding agents do more?
 
-<a href="https://luma.com/2g1xfjts" target="_blank">
+We'll talk about:
+
+- Token efficiency and Downsides of JSON
+- Writing your own drop-ins for MCP tools
+- Other advanced tricks like .shims for forcing uv instead of python or bun instead of npm
+</em></p>
+
+<a href="https://luma.com/kbjf88pm" target="_blank">
 <img src="https://img.shields.io/badge/🦄_REGISTER_NOW-Join_Live_Session-ff4444?style=for-the-badge&logo=calendar" alt="Register Now">
 </a>
 
@@ -100,10 +107,29 @@ Before joining, get familiar with our toolkit:
         <div style="margin-bottom: 2px;">
           <span style="background: #dc3545; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: bold;">UPCOMING</span>
         </div>
+        <div style="color: #666; font-size: 13px; margin-bottom: 4px;">2025-09-16</div>
+        <div style="font-size: 16px; line-height: 1.3; margin-bottom: 6px;"><strong>#23</strong>: Bash vs. MCP - token efficient coding agent tooling</div>
+        <div style="font-size: 13px; color: #666;">
+          <a href="./2025-09-16-coding-agent-tools-bash-vs-mcp">code</a> • <a href="https://luma.com/kbjf88pm">register</a>
+        </div>
+      </div>
+    </td><td><div style="padding: 8px 0; line-height: 1.5;">On this week's AI That Works, we'll explore the great Bash vs. MCP debate - what's better for helping coding agents do more?
+
+We'll talk about:
+
+- Token efficiency and Downsides of JSON
+- Writing your own drop-ins for MCP tools
+- Other advanced tricks like .shims for forcing uv instead of python or bun instead of npm
+</div></td></tr>
+<tr><td>
+      <div style="padding: 8px 0;">
+        <div style="margin-bottom: 2px;">
+          <span style="background: #28a745; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: bold;">PAST</span>
+        </div>
         <div style="color: #666; font-size: 13px; margin-bottom: 4px;">2025-09-09</div>
         <div style="font-size: 16px; line-height: 1.3; margin-bottom: 6px;"><strong>#22</strong>: Generative UIs and Structured Streaming</div>
         <div style="font-size: 13px; color: #666;">
-          <a href="./2025-09-09-generative-uis">code</a> • <a href="https://luma.com/2g1xfjts">register</a>
+          <a href="./2025-09-09-generative-uis">code</a>
         </div>
       </div>
     </td><td><div style="padding: 8px 0; line-height: 1.5;">We'll explore hard problems in building rich UIs that rely on streaming data from LLMs. ​Specifically, we'll talk through techniques for rendering **STRUCTURED** outputs from LLMs, with real-world examples of how to handle partially-streamed outputs over incomplete JSON data. We'll explore advanced needs like * Fields that should be required for stream to start * ​Rendering React Components with partial data ​* Handling nullable fields vs. yet-to-be-streamed fields * ​Building high-quality User feedback * ​Handling errors mid-stream</div></td></tr>
