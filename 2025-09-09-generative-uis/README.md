@@ -51,7 +51,7 @@ We'll explore what's better for helping coding agents do more with fewer tokens:
 
 ## Whiteboards
 
-<!-- Add whiteboard images here -->
+<img width="4605" height="2714" alt="image" src="https://github.com/user-attachments/assets/4c6db50d-d051-4ef9-a8e6-bbbbb4e231b2" />
 
 ## Code Walkthrough
 
