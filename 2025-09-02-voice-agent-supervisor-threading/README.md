@@ -48,6 +48,16 @@ Join us as we explore building dynamic user interfaces that generate themselves 
 ### Whiteboards
 
 
+<img width="3274" height="1158" alt="image" src="https://github.com/user-attachments/assets/91327391-af0e-42a6-91fd-47dabdf1b269" />
+
+<img width="3754" height="2235" alt="image" src="https://github.com/user-attachments/assets/33978680-4c2b-4236-9b4c-eaeed0c88fea" />
+
+<img width="3463" height="2991" alt="image" src="https://github.com/user-attachments/assets/1b43b5c7-59a0-46e7-9bd3-f7b5c2fc60e1" />
+
+<img width="5816" height="4306" alt="image" src="https://github.com/user-attachments/assets/931a2c94-61a0-4ecd-bc21-bc6785f3e2e0" />
+
+<img width="4692" height="3773" alt="image" src="https://github.com/user-attachments/assets/e8f864d3-929d-4d81-af8c-fdaa9154f7b2" />
+
 
 
 
