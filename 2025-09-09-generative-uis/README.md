@@ -60,6 +60,7 @@ Semantic streaming (note each digit only comes out when it's complete)
 ![Semantic Streaming](https://github.com/user-attachments/assets/8c359082-8361-4f6d-94e4-7ad5bb82d64c)
 
 See if you spot the difference here between token streaming vs semantic streaming
+
 https://github.com/user-attachments/assets/78c83f23-130b-4a41-89ff-7a24aee4e596
 
 
