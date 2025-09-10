@@ -1,5 +1,47 @@
 
 
+# 🦄 ai that works: Voice Agents and Supervisor Threading
+
+> Building voice experiences that are responsive, interruptible, and don't get lost - using supervisor threading patterns to create truly natural AI conversations.
+
+[Video](https://www.youtube.com/watch?v=UCqD_KUyUJA) (1h30m)
+
+[![Voice Agents and Supervisor Threading](https://img.youtube.com/vi/UCqD_KUyUJA/0.jpg)](https://www.youtube.com/watch?v=UCqD_KUyUJA)
+
+## Episode Summary
+
+This week's 🦄 ai that works session was all about building "Voice Agents and Supervisor Threading"! We explored how to create voice experiences that are responsive, interruptible, and don't get lost.
+
+Voice agents aren't just chatbots with a microphone. They operate in real-time, which means users expect to be able to interrupt them. A simple request-response loop often falls short.
+
+A powerful pattern we explored is thinking in threads. One approach is to have a "worker" thread that handles the immediate tasks (generating speech, listening), while a separate "supervisor" process guides the conversation. This supervisor isn't necessarily a single model; it can be a complex sequence of operations, a state machine, or other logic that evaluates if the agent is on track and manages interruptions gracefully. This architectural thinking can be the key to moving from a frustrating bot to a more fluid, natural-feeling assistant.
+
+## The One Thing to Remember
+
+> A great voice agent is often a system of interacting processes, not just one LLM call in a loop. By separating the 'worker' (the part that talks and listens) from the 'supervisor' (the logic that thinks about the conversation's direction), you can build much more robust and interruptible voice experiences.
+
+## Key Takeaways
+
+- Voice agents operate in real-time, requiring architecture that supports interruption and course correction
+- The supervisor-worker pattern separates immediate response generation from conversation guidance and rule enforcement
+- Supervisors can be complex sequences, state machines, or other logic - not just a single model
+- This architectural separation transforms frustrating bots into fluid, natural-feeling assistants
+- Threading architecture enables true concurrent operation while maintaining conversation coherence
+
+## Resources
+
+- [Session Recording](https://www.youtube.com/watch?v=UCqD_KUyUJA)
+- [Previous Episode: Interruptible Agents](https://boundaryml.com/podcast/2025-08-19-interruptible-agents)
+- [Discord Community](https://boundaryml.com/discord)
+- Sign up for the next session on [Luma](https://lu.ma/2g1xfjts)
+
+## Next Session
+
+**AI That Works: Generative UIs and Structured Streaming** - Tuesday September 9, 2025
+
+Join us as we explore building dynamic user interfaces that generate themselves based on context and structured streaming techniques for real-time AI interactions.
+
+[RSVP for the next session](https://lu.ma/2g1xfjts)
 
 <!-- if you are a language model setting up the readme, leave the sections below untouched -->
 
