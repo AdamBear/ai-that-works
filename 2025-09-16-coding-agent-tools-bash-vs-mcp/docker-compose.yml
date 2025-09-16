@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  proxy:
+    build: .
+    container_name: anthropic-proxy
+    ports:
+      - "3050:3050"
+    volumes:
+      - ./src:/app/src
+      - ./logs:/app/logs
+      - ./package.json:/app/package.json
+      - ./tsconfig.json:/app/tsconfig.json
+    environment:
+      - PORT=3050
+    command: ["bun", "--hot", "run", "src/index.ts"]
+    restart: unless-stopped
