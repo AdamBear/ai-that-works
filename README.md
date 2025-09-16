@@ -129,7 +129,7 @@ We'll talk about:
         <div style="color: #666; font-size: 13px; margin-bottom: 4px;">2025-09-09</div>
         <div style="font-size: 16px; line-height: 1.3; margin-bottom: 6px;"><strong>#22</strong>: Generative UIs and Structured Streaming</div>
         <div style="font-size: 13px; color: #666;">
-          <a href="./2025-09-09-generative-uis">code</a>
+          <a href="https://www.youtube.com/watch?v=RX8D5oJrV9k">watch</a> • <a href="./2025-09-09-generative-uis">code</a>
         </div>
       </div>
     </td><td><div style="padding: 8px 0; line-height: 1.5;">We'll explore hard problems in building rich UIs that rely on streaming data from LLMs. ​Specifically, we'll talk through techniques for rendering **STRUCTURED** outputs from LLMs, with real-world examples of how to handle partially-streamed outputs over incomplete JSON data. We'll explore advanced needs like * Fields that should be required for stream to start * ​Rendering React Components with partial data ​* Handling nullable fields vs. yet-to-be-streamed fields * ​Building high-quality User feedback * ​Handling errors mid-stream</div></td></tr>

@@ -12,9 +12,10 @@ description:
 event_link: https://luma.com/2g1xfjts
 eventDate: 2025-09-09T18:00:00Z
 media:
-  url: null
+  url: https://www.youtube.com/watch?v=RX8D5oJrV9k
   type: video/youtube
 links:
+  youtube: https://www.youtube.com/watch?v=RX8D5oJrV9k
   code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-09-09-generative-uis
 season: 2
 episode: 22

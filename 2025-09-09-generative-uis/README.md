@@ -2,7 +2,7 @@
 
 > Moving beyond basic token-by-token streaming to create fluid, interactive, and truly modern AI user experiences with semantic streaming of structured objects.
 
-[Video](https://www.youtube.com/watch?v=RX8D5oJrV9k) (1h30m)
+[Video](https://www.youtube.com/watch?v=RX8D5oJrV9k) (1h)
 
 [![Generative UIs and Structured Streaming](https://img.youtube.com/vi/RX8D5oJrV9k/0.jpg)](https://www.youtube.com/watch?v=RX8D5oJrV9k)
 
@@ -51,7 +51,20 @@ We'll explore what's better for helping coding agents do more with fewer tokens:
 
 ## Whiteboards
 
-<!-- Add whiteboard images here -->
+<img width="4605" height="2714" alt="image" src="https://github.com/user-attachments/assets/4c6db50d-d051-4ef9-a8e6-bbbbb4e231b2" />
+
+Token based streaming (note each digit comes out in sequence - 1, 10, 100, etc)
+![Semantic Streaming vs Token-based](https://github.com/user-attachments/assets/dbe713a8-b335-4b3d-b5eb-4346755052f1)
+
+Semantic streaming (note each digit only comes out when it's complete)
+![Semantic Streaming](https://github.com/user-attachments/assets/8c359082-8361-4f6d-94e4-7ad5bb82d64c)
+
+See if you spot the difference here between token streaming vs semantic streaming
+
+https://github.com/user-attachments/assets/78c83f23-130b-4a41-89ff-7a24aee4e596
+
+
+
 
 ## Code Walkthrough
 

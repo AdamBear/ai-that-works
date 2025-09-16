@@ -16,8 +16,25 @@
       <link>https://github.com/ai-that-works/ai-that-works</link>
     </image>
     <atom:link href="https://github.com/ai-that-works/ai-that-works/raw/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 09 Sep 2025 22:53:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 15:00:58 GMT</lastBuildDate>
     <ttl>1440</ttl>
+    <item>
+      <title><![CDATA[Generative UIs and Structured Streaming]]></title>
+      <description><![CDATA[We'll explore hard problems in building rich UIs that rely on streaming data from LLMs. ​Specifically, we'll talk through techniques for rendering **STRUCTURED** outputs from LLMs, with real-world examples of how to handle partially-streamed outputs over incomplete JSON data. We'll explore advanced needs like * Fields that should be required for stream to start * ​Rendering React Components with partial data ​* Handling nullable fields vs. yet-to-be-streamed fields * ​Building high-quality User feedback * ​Handling errors mid-stream
+
+Watch: https://www.youtube.com/watch?v=RX8D5oJrV9k
+Code: https://github.com/ai-that-works/ai-that-works/tree/main/2025-09-09-generative-uis
+Event: https://luma.com/2g1xfjts
+
+AI That Works - Weekly conversations about production-ready AI engineering with live coding and Q&A.]]></description>
+      <link>https://www.youtube.com/watch?v=RX8D5oJrV9k</link>
+      <guid isPermaLink="false">aitw-022</guid>
+      <pubDate>Tue, 09 Sep 2025 18:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <category>Software Engineering</category>
+      <category>Artificial Intelligence</category>
+      <enclosure url="https://www.youtube.com/watch?v=RX8D5oJrV9k" type="video/youtube" />
+    </item>
     <item>
       <title><![CDATA[Voice Agents and Supervisor Threading]]></title>
       <description><![CDATA[Exploring voice-based AI agents and supervisor threading patterns for managing complex conversational workflows.

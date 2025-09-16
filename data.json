@@ -29,10 +29,11 @@
       "eventDate": "2025-09-09T18:00:00Z",
       "event_type": "episode",
       "media": {
-        "url": null,
+        "url": "https://www.youtube.com/watch?v=RX8D5oJrV9k",
         "type": "video/youtube"
       },
       "links": {
+        "youtube": "https://www.youtube.com/watch?v=RX8D5oJrV9k",
         "code": "https://github.com/ai-that-works/ai-that-works/tree/main/2025-09-09-generative-uis"
       },
       "season": 2,
@@ -526,14 +527,14 @@
   ],
   "meta": {
     "totalEpisodes": 25,
-    "completedEpisodes": 21,
+    "completedEpisodes": 22,
     "upcomingEpisodes": 1,
     "workshops": 2,
     "seasons": [
       1,
       2
     ],
-    "lastUpdated": "2025-09-09T22:53:00.064Z",
+    "lastUpdated": "2025-09-10T15:00:58.469Z",
     "generatedBy": "validate-metadata.ts"
   }
 }
