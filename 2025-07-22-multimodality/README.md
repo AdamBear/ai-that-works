@@ -88,7 +88,7 @@ python main.py
 ## Resources
 
 - [Recording](https://youtu.be/sCScFZB4Am8)
-- [Code](https://github.com/dexhorthy/ai-that-works/tree/main/2025-07-22-multimodality)
+- [Code](https://github.com/ai-that-works/ai-that-works/tree/main/2025-07-22-multimodality)
 - [BAML Documentation](https://docs.boundaryml.com)
 - [Discord Community](https://boundaryml.com/discord)
 
