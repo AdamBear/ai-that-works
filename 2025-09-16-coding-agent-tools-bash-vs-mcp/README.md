@@ -29,6 +29,7 @@ output message (trimmed, formatted)
     "output_tokens":129,
     "service_tier":"standard"
 }
+```
 
 
 
@@ -108,6 +109,8 @@ Total cache creation tokens: 18957
 #### Linear CLI
 
 ```
+export LINEAR_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 bun run linear-cli/linear-cli.ts get-issue ENG-1709
 bun run linear-cli/linear-cli.ts get-issue ENG-1709 --comments
 ```
@@ -126,8 +129,24 @@ claude -p "write arg foo to bar.txt" \
 
 now fetch the issue
 
+```
+claude -p "fetch issue ENG-XXXX" \
+    --allowedTools=Bash(bun run linear-cli/:*) \
+    --output-format=stream-json \
+    --verbose \
+    | bun run src/inspect-logs.ts --stdin
+```
+
 
 now fetch the issue and all comments
+
+```
+claude -p "fetch issue ENG-XXXX and all comments" \
+    --allowedTools=Bash(bun run linear-cli/:*) \
+    --output-format=stream-json \
+    --verbose \
+    | bun run src/inspect-logs.ts --stdin
+```
 
 ### now fetch with mcp
 
@@ -145,16 +164,10 @@ claude -p "fetch issue ENG-1709" \
 ```
 
 ```
-```
-
-```
 claude -p "fetch issue ENG-1709 and all comments" \
-    --allowedTools=Bash(bun run linear-cli/:*) \
+    --dangerously-skip-permissions \
     --output-format=stream-json \
     --verbose \
     --mcp-config=mcp-linear.json \
     | bun run src/inspect-logs.ts --stdin
-```
-
-```
 ```

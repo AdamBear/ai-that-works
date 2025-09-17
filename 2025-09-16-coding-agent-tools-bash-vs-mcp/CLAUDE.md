@@ -8,4 +8,10 @@
 
 # using linear
 
-use the mcp tools
+fetch an issue
+
+bun run linear-cli/linear-cli.ts get-issue ENG-1709
+
+fetch with comments
+
+bun run linear-cli/linear-cli.ts get-issue ENG-1709 --comments

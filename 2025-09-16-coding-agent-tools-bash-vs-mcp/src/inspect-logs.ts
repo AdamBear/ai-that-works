@@ -74,8 +74,7 @@ async function processLine(line: string, lineNumber: number, seenMessageIds: Set
     } else if (entry.type === 'result') {
       const result = (entry as any).result;
       if (result) {
-        const preview = result.substring(0, 20);
-        description = `result: "${preview}${result.length > 20 ? '...' : ''}"`;
+        description = `result: "${result}"`;
       }
     }
 
